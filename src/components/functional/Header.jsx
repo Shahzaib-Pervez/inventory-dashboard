@@ -5,7 +5,7 @@ export default function Header({ activeCount, totalCount }) {
     <header className="app-header">
       <div className="app-header__inner">
         <div className="brand">
-          <img className="brand__logo" src="/favicon.svg" alt="" width="40" height="40" />
+          <img className="brand__logo" src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width="40" height="40" />
           <div>
             <h1 className="brand__name">StockPilot</h1>
             <p className="brand__tag">E-Commerce Inventory &amp; Stock Dashboard</p>

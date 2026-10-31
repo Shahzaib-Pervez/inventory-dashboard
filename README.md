@@ -4,8 +4,8 @@ A React (Vite) single-page application for managing an online store's inventory.
 
 > **Course:** Web Engineering / Frontend Development (CLO1 & CLO2) – *Advanced React Component Architecture & State Management*
 
-- **Live deployment:** `<add your Vercel / Netlify URL here>`
-- **GitHub repository:** `<add your repository URL here>`
+- **Live deployment:** https://shahzaib-pervez.github.io/inventory-dashboard/
+- **GitHub repository:** https://github.com/Shahzaib-Pervez/inventory-dashboard
 
 ## Features
 
