@@ -1,0 +1,153 @@
+/* ==========================================================================
+   StockPilot design system – tokens, reset & base styles
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Inter', system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  --accent-1: hsl(252 100% 68%);
+  --accent-2: hsl(187 90% 52%);
+  --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+
+  --success: hsl(152 68% 46%);
+  --warning: hsl(38 96% 56%);
+  --danger: hsl(350 88% 62%);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: 0.22s var(--ease);
+}
+
+/* Dark palette (default) */
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0b0d17;
+  --bg-elevated: #121528;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #eceefb;
+  --text-muted: #9298b5;
+  --input-bg: rgba(10, 12, 26, 0.6);
+  --shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.6);
+  --blob-1: hsl(252 100% 60% / 0.28);
+  --blob-2: hsl(187 95% 50% / 0.18);
+  --blob-3: hsl(320 90% 60% / 0.14);
+}
+
+/* Light palette */
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f3f4fb;
+  --bg-elevated: #ffffff;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --border: rgba(30, 36, 80, 0.1);
+  --border-strong: rgba(30, 36, 80, 0.2);
+  --text: #161a3a;
+  --text-muted: #5d6385;
+  --input-bg: #ffffff;
+  --shadow: 0 10px 34px -14px rgba(40, 46, 110, 0.28);
+  --blob-1: hsl(252 100% 70% / 0.22);
+  --blob-2: hsl(187 95% 55% / 0.2);
+  --blob-3: hsl(320 90% 70% / 0.14);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  transition: background-color 0.35s ease, color 0.35s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: hsl(252 100% 68% / 0.35);
+}
+
+/* Slim scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
